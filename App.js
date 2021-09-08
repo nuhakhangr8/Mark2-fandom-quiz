@@ -2,6 +2,9 @@ var readlineSync=require('readline-sync');
 
 var score=0;
 
+var userName=readlineSync.question("Enter your name? ");
+console.log("Welcome "+ userName +" to Do you know Nuha? ");
+
 var question="Q.The soldiers laughing and drinking on duty belonged to which regiment?  ";
 var answer="Garrison Regiment";
 var regiment=['Scout Regiment', 'Garrison Regiment', 'Military Police Regiment'];
@@ -36,7 +39,7 @@ if(corps[index]===answertwo){
   console.log("correct answer");
   score=score+1;
 }
-var questionthree="Q.Which is the tallest titan? ";
+var questionthree="Q.Which was the first titan? ";
 var answerthree="Colossal Titan";
 var titans =["Attack titan","Rod Reiss's Titan form","Armoured titan","Colossal Titan"];
 
@@ -46,6 +49,27 @@ if(titans[index]===answerthree){
   console.log("correct answer");
   score=score+1;
 }
+var questionthree="Q.The girl eating potato in the training? ";
+var answerthree="Sasha Braus";
+var titans =["Christina lenz","Annie Leonhart","Christina lenz","Sasha Braus"];
+
+index = readlineSync.keyInSelect(titans,questionthree);
+console.log(titans[index])
+if(titans[index]===answerthree){
+  console.log("correct answer");
+  score=score+1;
+}
+var questionthree="Q.What was the name of the second titan? ";
+var answerthree="Armoured Titan";
+var titans =["Attack titan","Rod Reiss's Titan form","Armoured titan","Colossal Titan"];;
+
+index = readlineSync.keyInSelect(titans,questionthree);
+console.log(titans[index])
+if(titans[index]===answerthree){
+  console.log("correct answer");
+  score=score+1;
+}
+
 console.log("You Scored:",score);
 var scoreboard=[
   {
